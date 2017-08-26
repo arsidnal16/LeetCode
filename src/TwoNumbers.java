@@ -38,7 +38,11 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         	if(l1!=null) l1 = l1.next;
         	if(l2!=null) l2 = l2.next;
         }
-       return result; 
+        
+        if(carry > 0) {
+        	current.next = new ListNode(carry);
+        }
+       return result.next; 
         
     }
 }
