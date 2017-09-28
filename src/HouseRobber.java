@@ -1,7 +1,7 @@
 
 public class HouseRobber {
 	 public int rob(int[] num) {
-	        int rob = 0; //max monney can get if rob current house
+	        int rob = 0; //max money can get if rob current house
 	    int notrob = 0; //max money can get if not rob current house
 	    for(int i=0; i<num.length; i++) {
 	        int currob = notrob + num[i]; //if rob current value, previous house must not be robbed
