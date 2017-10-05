@@ -1,4 +1,4 @@
-package Medium;
+package Hash;
 
 import java.util.HashSet;
 import java.util.Iterator;

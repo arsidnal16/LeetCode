@@ -1,4 +1,4 @@
-package Medium;
+package arraysAndString;
 
 public class PalindromicSubstring {
 	

@@ -1,6 +1,6 @@
-package Medium;
+package matrix;
 
-public class RotateArray {
+public class RotateMatrix {
 	
 	/*The idea was firstly transpose the matrix and then flip it symmetrically. For instance,
 

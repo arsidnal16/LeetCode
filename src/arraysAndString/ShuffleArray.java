@@ -1,4 +1,4 @@
-package Medium;
+package arraysAndString;
 
 import java.util.Random;
 
