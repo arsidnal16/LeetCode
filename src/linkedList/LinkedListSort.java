@@ -30,10 +30,7 @@ public class LinkedListSort {
 	    
 	    public ListNode sortList(ListNode head) {
 	        //bottom case
-	        if(head == null){
-	            return head;
-	        }
-	        if(head.next == null){
+	        if(head == null  || head.next == null){
 	            return head;
 	        }
 	        
