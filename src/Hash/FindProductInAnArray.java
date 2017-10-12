@@ -2,6 +2,32 @@ package Hash;
 
 import java.util.HashSet;
 
+/*
+ * Given an array of distinct elements and a number x, find if there is a pair with product equal to x.
+
+Examples :
+
+Input : arr[] = {10, 20, 9, 40};
+        int x = 400;
+Output : Yes
+
+Input : arr[] = {10, 20, 9, 40};
+        int x = 190;
+Output : No
+
+Input : arr[] = {-10, 20, 9, -40};
+        int x = 400;
+Output : Yes
+
+Input : arr[] = {-10, 20, 9, 40};
+        int x = -400;
+Output : Yes
+
+Input : arr[] = {0, 20, 9, 40};
+        int x = 0;
+Output : Yes
+ */
+
 public class FindProductInAnArray {
 
 	// Returns true if there is a pair in arr[0..n-1]
