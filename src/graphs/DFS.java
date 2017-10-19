@@ -6,7 +6,7 @@ import java.util.*;
  
 // This class represents a directed graph using adjacency list
 // representation
-class DFS
+public class DFS
 {
     private int V;   // No. of vertices
  

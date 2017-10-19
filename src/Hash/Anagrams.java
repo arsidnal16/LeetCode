@@ -1,5 +1,6 @@
 package Hash;
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 
 public class Anagrams {
@@ -37,13 +38,11 @@ public class Anagrams {
 			}
 		}
 		System.out.println(map.values());
-		if(map.values().isEmpty()) {
-			return true;
-		}
+		for(Entry<Character, Integer> entry :  map.entrySet()){
+	        if(entry.getValue() != 0) return false;
+	    }
 		
-		else {
-			return false;
-		}
+		return true;
 		
 		
 	}
