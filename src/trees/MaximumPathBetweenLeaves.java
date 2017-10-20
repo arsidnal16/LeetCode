@@ -47,8 +47,7 @@ public class MaximumPathBetweenLeaves {
  
         // If any of the two children is empty, return
         // root sum for root being on one side
-        return (node.left == null) ? rs + node.data
-                : ls + node.data;
+        return (node.left == null) ? rs + node.data : ls + node.data;
     }
     
     
