@@ -21,6 +21,8 @@ public class RemoveNthFromLinkedList {
 			}
 			p2 = p2.next;
 		}
+		
+		
 		while (p2 != null) { // move till p2 goes past the end of the list.
 			p1 = p1.next;
 			p2 = p2.next;

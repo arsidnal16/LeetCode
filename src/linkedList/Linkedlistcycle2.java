@@ -2,6 +2,8 @@ package linkedList;
 
 public class Linkedlistcycle2 {
 	public ListNode detectCycle(ListNode head) {
+		if(head == null) return head;
+		
 		ListNode slow = head;
 		ListNode fast = head;
 

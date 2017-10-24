@@ -24,7 +24,7 @@ public class LetterCombinations {
     }
 	
 	public static void main(String args[]) {
-		letterCombinations("2");
+		System.out.println(letterCombinations("23"));
 	}
 
 }

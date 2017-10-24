@@ -14,15 +14,15 @@ public class Trie {
     }
 
     public void insert(String word) {
-        TrieNode ws = root;
+        TrieNode node = root;
         for(int i = 0; i < word.length(); i++){
             char c = word.charAt(i);
-            if(ws.children[c - 'a'] == null){
-                ws.children[c - 'a'] = new TrieNode();
+            if(node.children[c - 'a'] == null){
+                node.children[c - 'a'] = new TrieNode();
             }
-            ws = ws.children[c - 'a'];
+            node = node.children[c - 'a'];
         }
-        ws.isWord = true;
+        node.isWord = true;
     }
 
     public boolean search(String word) {

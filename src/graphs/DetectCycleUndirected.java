@@ -3,13 +3,13 @@ package graphs;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class DetectCycle {
+public class DetectCycleUndirected {
 	
 	 private int V;   // No. of vertices
 	    private LinkedList<Integer> adj[]; // Adjacency List Represntation
 	 
 	    // Constructor
-	    DetectCycle(int v) {
+	    DetectCycleUndirected(int v) {
 	        V = v;
 	        adj = new LinkedList[v];
 	        for(int i=0; i<v; ++i)
@@ -26,7 +26,7 @@ public class DetectCycle {
 	    public static void main(String args[])
 	    {
 	        // Create a graph given in the above diagram
-	    	DetectCycle g1 = new DetectCycle(5);
+	    	DetectCycleUndirected g1 = new DetectCycleUndirected(5);
 	        g1.addEdge(1, 0);
 	        g1.addEdge(0, 2);
 	        g1.addEdge(2, 0);
@@ -37,7 +37,7 @@ public class DetectCycle {
 	        else
 	            System.out.println("Graph doesn't contains cycle");
 	 
-	        DetectCycle g2 = new DetectCycle(3);
+	        DetectCycleUndirected g2 = new DetectCycleUndirected(3);
 	        g2.addEdge(0, 1);
 	        g2.addEdge(1, 2);
 	        if (g2.isCyclic())

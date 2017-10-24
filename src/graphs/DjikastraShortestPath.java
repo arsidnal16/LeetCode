@@ -11,7 +11,8 @@ public class DjikastraShortestPath
     int minDistance(int dist[], Boolean sptSet[])
     {
         // Initialize min value
-        int min = Integer.MAX_VALUE, min_index=-1;
+        int min = Integer.MAX_VALUE;
+        int min_index = -1;
  
         for (int v = 0; v < V; v++)
             if (sptSet[v] == false && dist[v] <= min)

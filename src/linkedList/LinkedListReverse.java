@@ -12,18 +12,15 @@ public class LinkedListReverse {
 	  }
 	
 	/* Function to reverse the linked list */
-    Node reverse(Node node) {
-        Node prev = null;
-        Node current = node;
-        Node next = null;
-        while (current != null) {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-        }
-        node = prev;
-        return node;
+    Node reverse(Node head) {
+    		Node prev = null;
+		while (head != null) {
+			Node next = head.next;
+			head.next = prev;
+			prev = head;
+			head = next;
+		}
+		return prev;
     }
  
 

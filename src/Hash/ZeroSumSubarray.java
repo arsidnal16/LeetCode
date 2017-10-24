@@ -1,11 +1,11 @@
 package Hash;
 
-// A Java program to find if there is a zero sum subarray
+// A Java program to find if there is a zero sum sub-array
 import java.util.HashMap;
 
 class ZeroSumSubarray {
 
-	// Returns true if arr[] has a subarray with sero sum
+	// Returns true if arr[] has a sub-array with zero sum
 	static Boolean printZeroSumSubarray(int arr[]) {
 		// Creates an empty hashMap hM
 		HashMap<Integer, Integer> hM = new HashMap<Integer, Integer>();

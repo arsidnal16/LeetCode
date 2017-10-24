@@ -20,7 +20,8 @@ return [0, 1].
 
 public class TwoSum {
 public int[] twoSum(int[] nums, int target) {
-    int[] empty = new int[] {};
+    int[] empty ={};
+    
 	if(nums.length == 0 || nums == null) {
 		return empty;
 	}
@@ -35,6 +36,6 @@ public int[] twoSum(int[] nums, int target) {
     }
     throw new IllegalArgumentException("No two sum solution");
 
-}
+  }
 
 }

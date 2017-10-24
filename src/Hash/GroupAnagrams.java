@@ -8,7 +8,9 @@ import java.util.Map;
 public class GroupAnagrams {
 	
 	public static List<List<String>> groupAnagrams(String[] strs) {
+		
         if (strs == null || strs.length == 0) return new ArrayList<List<String>>();
+        
         Map<String, List<String>> map = new HashMap<String, List<String>>();
         for (String s : strs) {
             char[] ca = s.toCharArray();
