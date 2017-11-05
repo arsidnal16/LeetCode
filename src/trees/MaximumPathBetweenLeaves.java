@@ -40,7 +40,7 @@ public class MaximumPathBetweenLeaves {
             // Update result if needed
             res = Math.max(res, ls + rs + node.data);
  
-            // Return maxium possible value for root being
+            // Return maximum possible value for root being
             // on one side
             return Math.max(ls, rs) + node.data;
         }

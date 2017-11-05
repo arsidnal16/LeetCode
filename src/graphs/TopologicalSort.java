@@ -32,7 +32,7 @@ public class TopologicalSort {
 	    {
 	        // Mark the current node as visited.
 	        visited[v] = true;
-	        Integer i;
+	        int i;
 	 
 	        // Recur for all the vertices adjacent to this
 	        // vertex

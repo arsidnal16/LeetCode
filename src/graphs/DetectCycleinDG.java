@@ -26,7 +26,7 @@ public class DetectCycleinDG {
 		for (int k : adj[i]) {
 			if (!visited[k])
 				DFSUtil(visited, k, st);
-			else if (st.contains(k))
+			else if (st.peek() == k)
 				flag = 1;
 		}
 		if (flag != 1)

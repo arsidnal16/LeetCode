@@ -39,9 +39,9 @@ public class PermutationOfAString {
 	     */
 	    public String swap(String a, int i, int j)
 	    {
-	        char temp;
+	        
 	        char[] charArray = a.toCharArray();
-	        temp = charArray[i] ;
+	        char temp = charArray[i] ;
 	        charArray[i] = charArray[j];
 	        charArray[j] = temp;
 	        return String.valueOf(charArray);

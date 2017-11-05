@@ -3,8 +3,6 @@ package arraysAndString;
 import java.util.HashSet;
 import java.util.Set;
 
-
-
 /*
  * 
  * Given two words (beginWord and endWord), and a dictionary's word list, 
@@ -31,16 +29,18 @@ You may assume beginWord and endWord are non-empty and are not the same
  * 
  */
 
+
+
 public class OneWordToAnother {
 	
-	public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
+
+	public static int ladderLength(String beginWord, String endWord, Set<String> wordList) {
 		Set<String> beginSet = new HashSet<String>(), endSet = new HashSet<String>();
 
-		int len = 1; 
-		
-		
+		int len = 1;
+
 		HashSet<String> visited = new HashSet<String>();
-		
+
 		beginSet.add(beginWord);
 		endSet.add(endWord);
 		while (!beginSet.isEmpty() && !endSet.isEmpty()) {
@@ -48,7 +48,7 @@ public class OneWordToAnother {
 				Set<String> set = beginSet;
 				beginSet = endSet;
 				endSet = set;
-				}
+			}
 
 			Set<String> temp = new HashSet<String>();
 			for (String word : beginSet) {
@@ -60,25 +60,24 @@ public class OneWordToAnother {
 						chs[i] = c;
 						String target = String.valueOf(chs);
 
-							if (endSet.contains(target)) {
-								return len + 1;
-								}
+						if (endSet.contains(target)) {
+							return len + 1;
+						}
 
-							if (!visited.contains(target) && wordList.contains(target)) {
-									temp.add(target);
-									visited.add(target);
-								}
+						if (!visited.contains(target) && wordList.contains(target)) {
+							temp.add(target);
+							visited.add(target);
+						}
 						chs[i] = old;
-					  }
-				    }
-			       }
+					}
+				}
+			}
 
-			    beginSet = temp;
-			    len++;
-		      }
-		
+			beginSet = temp;
+			len++;
+		}
+
 		return 0;
 	}
-	
 
 }

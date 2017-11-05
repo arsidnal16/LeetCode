@@ -1,5 +1,6 @@
 package Hash;
 
+import java.util.ArrayList;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.Vector;
@@ -23,22 +24,22 @@ public class VerticalTree {
 	// Utility function to store vertical order in map 'm'
 	// 'hd' is horizontal distance of current node from root.
 	// 'hd' is initially passed as 0
-	static void getVerticalOrder(Node root, int hd, TreeMap<Integer, Vector<Integer>> m) {
+	static void getVerticalOrder(Node root, int hd, TreeMap<Integer, ArrayList<Integer>> m) {
 		// Base case
 		if (root == null)
 			return;
 
 		// get the vector list at 'hd'
-		Vector<Integer> get = m.get(hd);
+		ArrayList<Integer> list = m.get(hd);
 
 		// Store current node in map 'm'
-		if (get == null) {
-			get = new Vector<>();
-			get.add(root.key);
+		if (list == null) {
+			list = new ArrayList<>();
+			list.add(root.key);
 		} else
-			get.add(root.key);
+			list.add(root.key);
 
-		m.put(hd, get);
+		m.put(hd, list);
 
 		// Store nodes in left subtree
 		getVerticalOrder(root.left, hd - 1, m);
@@ -52,13 +53,13 @@ public class VerticalTree {
 	static void printVerticalOrder(Node root) {
 		// Create a map and store vertical order in map using
 		// function getVerticalOrder()
-		TreeMap<Integer, Vector<Integer>> m = new TreeMap<>();
+		TreeMap<Integer, ArrayList<Integer>> m = new TreeMap<>();
 		int hd = 0;
 		getVerticalOrder(root, hd, m);
 
 		// Traverse the map and print nodes at every horizontal
 		// distance (hd)
-		for (Entry<Integer, Vector<Integer>> entry : m.entrySet()) {
+		for (Entry<Integer, ArrayList<Integer>> entry : m.entrySet()) {
 			System.out.println(entry.getValue());
 		}
 	}
