@@ -2,11 +2,15 @@ package arraysAndString;
 
 public class PermutationOfAString {
 	
+	public static void main(String args[]) {
+		permute("america");
+	}
+	
 	
 	// Java program to print all permutations of a
 	// given string.
-	public void permute(String abc){
-		permute(abc, 0, abc.length()-1);
+	public static void permute(String abc){
+		permuteUtil(abc, 0, abc.length()-1);
 	}
 	
 	/**
@@ -15,7 +19,7 @@ public class PermutationOfAString {
      * @param l starting index
      * @param r end index
      */
-	 private void permute(String str, int l, int r)
+	 private static void permuteUtil(String str, int l, int r)
 	    {
 	        if (l == r)
 	            System.out.println(str);
@@ -24,7 +28,7 @@ public class PermutationOfAString {
 	            for (int i = l; i <= r; i++)
 	            {
 	                str = swap(str,l,i);
-	                permute(str, l+1, r);
+	                permuteUtil(str, l+1, r);
 	                str = swap(str,l,i);
 	            }
 	        }
@@ -37,7 +41,7 @@ public class PermutationOfAString {
 	     * @param j position 2
 	     * @return swapped string
 	     */
-	    public String swap(String a, int i, int j)
+	    public static String swap(String a, int i, int j)
 	    {
 	        
 	        char[] charArray = a.toCharArray();

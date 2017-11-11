@@ -27,7 +27,7 @@ public class BinaryTreeInorderTraversal {
 				s.push(current);
 				current = current.left;
 			}
-			while(s.size() > 0){
+			while(!s.isEmpty()){
 				current = s.pop(); 
 				list.add(current.val);
 				if(current.right != null){

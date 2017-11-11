@@ -2,6 +2,17 @@ package arraysAndString;
 /* Dynamic Programming Java implementation of LCS problem */
 public class LongestCommonSubsequence
 {
+	
+	/*
+	 * Examples:
+		1) Consider the input strings “AGGTAB” and “GXTXAYB”. Last characters match for the strings. So length of LCS can be written as:
+				L(“AGGTAB”, “GXTXAYB”) = 1 + L(“AGGTA”, “GXTXAY”)
+				
+		2) Consider the input strings “ABCDGH” and “AEDFHR. Last characters do not match for the strings. So length of LCS can be written as:
+				L(“ABCDGH”, “AEDFHR”) = MAX ( L(“ABCDG”, “AEDFHR”), L(“ABCDGH”, “AEDFH”) )
+
+
+	 */
  
   /* Returns length of LCS for X[0..m-1], Y[0..n-1] */
   int lcs( char[] X, char[] Y, int m, int n )
