@@ -13,6 +13,8 @@ public class OCR {
 	        for(int i = 0 ; i <S.length(); i++) {
 	        		if(!Character.isDigit(S.charAt(i))) listS.add(S.charAt(i));
 	        		else {
+	        			
+	        			
 	        			int x = Character.getNumericValue(S.charAt(i));
 	        			System.out.println(x);
 	        			int times = 1;
