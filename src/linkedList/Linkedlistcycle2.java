@@ -13,12 +13,12 @@ public class Linkedlistcycle2 {
 			slow = slow.next;
 
 			if (fast == slow) {
-				ListNode slow2 = head;
-				while (slow2 != slow) {
+				 slow = head;
+				while (slow != fast) {
 					slow = slow.next;
-					slow2 = slow2.next;
+					fast = fast.next;
 				}
-				return slow;
+				return slow;  // slow is the start of the cycle
 			}
 		}
 		return null;
