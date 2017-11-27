@@ -15,30 +15,22 @@ public class BinaryTreeInorderTraversal {
 	  }
 	
 	 public List<Integer> inorderTraversal(TreeNode root) {
-	        List<Integer> list = new ArrayList<Integer>();
-	        
-	        if(root == null){
-				return list;
-			}
-			Stack<TreeNode> s = new Stack<TreeNode>();
-			TreeNode current = root;
-			
-			while(current!=null){
-				s.push(current);
-				current = current.left;
-			}
-			while(!s.isEmpty()){
-				current = s.pop(); 
-				list.add(current.val);
-				if(current.right != null){
-					current = current.right;
-					while(current != null){
-						s.push(current);
-						current = current.left;
-					}
-				}
-			}
-	        return list;
+		 List<Integer> list = new ArrayList<Integer>();
+
+		    Stack<TreeNode> stack = new Stack<TreeNode>();
+		    TreeNode cur = root;
+
+		    while(cur!=null || !stack.empty()){
+		        while(cur!=null){
+		            stack.add(cur);
+		            cur = cur.left;
+		        }
+		        cur = stack.pop();
+		        list.add(cur.val);
+		        cur = cur.right;
+		    }
+
+		    return list;
 	    }
 
 }

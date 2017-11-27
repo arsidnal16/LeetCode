@@ -6,9 +6,8 @@ public class Permutations {
 	
 	public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
-   // Arrays.sort(nums); // not necessary
-   backtrack(list, new ArrayList<>(), nums);
-   return list;
+        backtrack(list, new ArrayList<>(), nums);
+        return list;
 }
 
 	private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums){

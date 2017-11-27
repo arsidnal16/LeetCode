@@ -3,7 +3,7 @@ package arraysAndString;
 public class PermutationOfAString {
 	
 	public static void main(String args[]) {
-		permute("america");
+		permute("sid");
 	}
 	
 	

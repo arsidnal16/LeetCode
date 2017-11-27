@@ -3,11 +3,11 @@ package stackQueue;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class MyStack 
+public class StackAsQueue 
 {
     Queue<Integer> queue;
     
-    public MyStack()
+    public StackAsQueue()
     {
         this.queue=new LinkedList<Integer>();
     }
