@@ -16,10 +16,8 @@ public class KLargestElementsInBST {
 	private void getKLargestElements(TreeNode root, List<TreeNode> list, int k) {
 		getKLargestElements(root.right, list, k);
 		if(root!=null && list.size() < k) {
-			if(list.size() < k) {
 				list.add(root);
 				getKLargestElements(root.left, list, k);
-			}
 		}
 		
 	}
