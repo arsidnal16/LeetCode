@@ -44,5 +44,32 @@ public class StringToInt {
 	 
 		return (int) result;
 	}
+	
+	
+	
+	
+	
+	
+	
+	public static String intToSTring(int x) {
+		boolean isNegative = false;
+		if(x < 0) {
+			isNegative = true;
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		do {
+			sb.append((char)('0'+ Math.abs(x%10)));
+			x/=10;
+		} while(x!=0);
+		
+		if(isNegative) {
+			sb.append('-');
+		}
+		
+		sb.reverse();
+		return sb.toString();
+		
+	}
 
 }

@@ -7,7 +7,7 @@ import java.util.Map;
 public class LongestSubarray {
 	
 	public static int longestSubarraywithdistinctEntries(List<Integer> A) {
-		//records the most recent occurence of each entry
+		//records the most recent occurrence of each entry
 		
 		Map<Integer, Integer> mostRecentMap = new HashMap<>();
 		int startIndx = 0 ; 

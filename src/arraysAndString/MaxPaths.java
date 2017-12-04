@@ -2,7 +2,7 @@ package arraysAndString;
 
 public class MaxPaths {
 
-	static int[] stack;
+	static int[] arr;
 	static int top;
 
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class MaxPaths {
 		int m = matrix.length;
 		int n = matrix[0].length;
 
-		stack = new int[m * n];
+		arr = new int[m * n];
 		top = 0;
 		printAllPaths(matrix, m, n);
 	}
@@ -36,7 +36,7 @@ public class MaxPaths {
 		if (m == 0 || n == 0)
 			return;
 
-		stack[top++] = matrix[m - 1][n - 1];
+		arr[top++] = matrix[m - 1][n - 1];
 		if (m == 1 && n == 1)
 			printStack();
 
@@ -47,7 +47,7 @@ public class MaxPaths {
 
 	private static void printStack() {
 		for (int i = top - 1; i > 0; i--)
-			System.out.print(stack[i] + "->");
-		System.out.println(stack[0]);
+			System.out.print(arr[i] + "->");
+		System.out.println(arr[0]);
 	}
 }

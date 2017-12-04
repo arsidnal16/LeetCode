@@ -9,7 +9,9 @@ public class TimePlanner {
 	 * 
 	 * Time Planner
 
-Implement a function meetingPlanner that given the availability, slotsA and slotsB, of two people and a meeting duration dur, returns the earliest time slot that works for both of them and is of duration dur. If there is no common time slot that satisfies the duration requirement, return null.
+Implement a function meetingPlanner that given the availability, slotsA and slotsB, of two people and a meeting duration dur, 
+returns the earliest time slot that works for both of them and is of duration dur. If there is no common time slot that satisfies 
+the duration requirement, return null.
 
 Time is given in a Unix format called Epoch, which is a nonnegative integer holding the number of seconds that have elapsed since 00:00:00 UTC, Thursday, 1 January 1970.
 
