@@ -29,10 +29,7 @@ You may assume beginWord and endWord are non-empty and are not the same
  * 
  */
 
-
-
 public class OneWordToAnother {
-	
 
 	public static int ladderLength(String beginWord, String endWord, Set<String> wordList) {
 		Set<String> beginSet = new HashSet<String>(), endSet = new HashSet<String>();

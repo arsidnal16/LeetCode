@@ -5,7 +5,9 @@ public class ValidParanthesis {
 	
 	public static boolean isValid(String s) {
 		Stack<Character> stack = new Stack<Character>();
-		for (char c : s.toCharArray()) {
+		
+		String st = s.replaceAll("[a-zA-Z0-9 ]", "");
+		for (char c : st.toCharArray()) {
 			
 			if (c == '(')
 				stack.push(')');

@@ -35,6 +35,8 @@ public class LevelOrderTraversal {
 	        
 	        System.out.println("Level order traversal of binary tree is - ");
 	        LevelOrderTraversal.levelOrderTraversal(root);
+	        System.out.println();
+	        LevelOrderTraversal.levelOrderTraversal2(root);
 	       
 	    }
 
@@ -54,6 +56,38 @@ public class LevelOrderTraversal {
 				
 				
 			}
+			
+			
+		}
+	 
+	 
+	 
+	 
+	 public static void levelOrderTraversal2(TreeNode root){
+			Queue<TreeNode> q = new LinkedList<TreeNode>();
+			q.add(root);
+			while(!q.isEmpty()){
+				// nodeCount (queue size) indicates number of nodes
+	            // at current level.
+	            int nodeCount = q.size();
+	            if(nodeCount == 0)
+	                break;
+	             
+	            // Dequeue all nodes of current level and Enqueue all
+	            // nodes of next level
+	            while(nodeCount > 0)
+	            {
+	                TreeNode node = q.peek();
+	                System.out.print(node.val + " ");
+	                q.remove();
+	                if(node.left != null)
+	                    q.add(node.left);
+	                if(node.right != null)
+	                    q.add(node.right);
+	                nodeCount--;
+	            }
+	            System.out.println();
+	        }
 			
 		}
 
