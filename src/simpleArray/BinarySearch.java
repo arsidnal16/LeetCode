@@ -1,9 +1,9 @@
-package arraysAndString;
+package simpleArray;
 class BinarySearch
 {
     // Returns index of x if it is present in arr[l..r], else
     // return -1
-    int binarySearch(int arr[], int l, int r, int x)
+    int binarySearchRecursive(int arr[], int l, int r, int x)
     {
         if (r>=l)
         {
@@ -16,11 +16,11 @@ class BinarySearch
             // If element is smaller than mid, then it can only
             // be present in left subarray
             if (arr[mid] > x)
-               return binarySearch(arr, l, mid-1, x);
+               return binarySearchRecursive(arr, l, mid-1, x);
  
             // Else the element can only be present in right
             // subarray
-            return binarySearch(arr, mid+1, r, x);
+            return binarySearchRecursive(arr, mid+1, r, x);
         }
  
         // We reach here when element is not present in array

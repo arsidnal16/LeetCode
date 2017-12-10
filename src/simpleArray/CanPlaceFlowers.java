@@ -1,4 +1,4 @@
-package arraysAndString;
+package simpleArray;
 
 public class CanPlaceFlowers {
 	

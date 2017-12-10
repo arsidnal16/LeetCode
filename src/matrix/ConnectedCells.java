@@ -1,4 +1,4 @@
-package arraysAndString;
+package matrix;
 
 public class ConnectedCells {
 	

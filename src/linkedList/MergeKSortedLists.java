@@ -2,7 +2,9 @@ package linkedList;
 
 import linkedList.OddEvenLinkedList.ListNode;
 
-public class MergeKLists {
+public class MergeKSortedLists {
+	
+	
 	public static ListNode mergeKLists(ListNode[] lists){
 	    return partion(lists,0,lists.length-1);
 	}
