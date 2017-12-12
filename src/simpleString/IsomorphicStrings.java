@@ -1,4 +1,4 @@
-package arraysAndString;
+package simpleString;
 
 public class IsomorphicStrings {
 /*	

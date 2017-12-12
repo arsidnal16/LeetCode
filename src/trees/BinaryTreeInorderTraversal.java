@@ -27,7 +27,8 @@ public class BinaryTreeInorderTraversal {
 		        }
 		        cur = stack.pop();
 		        list.add(cur.val);
-		        cur = cur.right;
+		        
+		        if(cur.right != null)cur = cur.right;
 		    }
 
 		    return list;

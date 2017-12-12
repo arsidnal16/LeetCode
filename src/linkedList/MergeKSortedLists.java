@@ -4,7 +4,7 @@ import linkedList.OddEvenLinkedList.ListNode;
 
 public class MergeKSortedLists {
 	
-	
+	//Use divide and conquer
 	public static ListNode mergeKLists(ListNode[] lists){
 	    return partion(lists,0,lists.length-1);
 	}
