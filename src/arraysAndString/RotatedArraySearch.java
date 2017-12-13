@@ -2,29 +2,28 @@ package arraysAndString;
 
 public class RotatedArraySearch {
 	
-	 static int pivotedBinarySearch(int A[], int n, int target)
-	    {
-		 int lo=0,hi=n-1;
-	        // find the index of the smallest value using binary search.
-	        // Loop will terminate since mid < hi, and lo or hi will shrink by at least 1.
-	        // Proof by contradiction that mid < hi: if mid==hi, then lo==hi and loop would have been terminated.
-	        while(lo<hi){
-	            int mid=(lo+hi)/2;
-	            if(A[mid]>A[hi]) lo=mid+1;
-	            else hi=mid;
+	public int search(int[] A, int target) {
+	    int lo = 0;
+	    int hi = A.length - 1;
+	    while (lo < hi) {
+	        int mid = (lo + hi) / 2;
+	        if (A[mid] == target) return mid;
+	        
+	        if (A[lo] <= A[mid]) {
+	            if (target >= A[lo] && target < A[mid]) {
+	                hi = mid - 1;
+	            } else {
+	                lo = mid + 1;
+	            }
+	        } else {
+	            if (target > A[mid] && target <= A[hi]) {
+	                lo = mid + 1;
+	            } else {
+	                hi = mid - 1;
+	            }
 	        }
-	        // lo==hi is the index of the smallest value and also the number of places rotated.
-	        int rot=lo;
-	        lo=0;hi=n-1;
-	        // The usual binary search and accounting for rotation.
-	        while(lo<=hi){
-	            int mid=(lo+hi)/2;
-	            int realmid=(mid+rot)%n;
-	            if(A[realmid]==target)return realmid;
-	            if(A[realmid]<target)lo=mid+1;
-	            else hi=mid-1;
-	        }
-	        return -1;
 	    }
+	    return A[lo] == target ? lo : -1;
+	}
 
 }

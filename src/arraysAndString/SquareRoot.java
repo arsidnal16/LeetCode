@@ -3,7 +3,7 @@ package arraysAndString;
 public class SquareRoot {
 	
 	public int sqrt(int x) {
-        if (0 == x) return 0;
+        if (x == 0) return 0;
         int left = 1, right = x, ans = 0;
         while (left <= right) {
             int mid = left + (right - left) / 2;
