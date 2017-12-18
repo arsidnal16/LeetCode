@@ -1,6 +1,6 @@
 package arraysAndString;
 
-public class LongestSubString {
+public class LongestPalindromicSubString {
 	
 	//  Time O(n^2), Space O(1)
 	public String longestPalindrome(String s) {

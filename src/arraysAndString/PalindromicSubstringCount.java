@@ -1,6 +1,6 @@
 package arraysAndString;
 
-public class PalindromicSubstring {
+public class PalindromicSubstringCount {
 	
 	
 	  int count = 0;

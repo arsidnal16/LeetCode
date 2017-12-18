@@ -1,6 +1,6 @@
 package arraysAndString;
 
-public class findMaxCoverage {
+public class FindMaxCoverage {
 	
 	public double findMaxAverage(int[] nums, int k) {
         long sum = 0;

@@ -33,5 +33,14 @@ public class BinaryTreeInorderTraversal {
 
 		    return list;
 	    }
+	 
+	 
+	 public void inorderRec(TreeNode root) {
+	        if (root != null) {
+	            inorderRec(root.left);
+	            System.out.println(root.val);
+	            inorderRec(root.right);
+	        }
+	    }
 
 }
