@@ -37,7 +37,7 @@ public class Anagrams {
 				map.put(t.charAt(i), map.get(t.charAt(i)) -1);
 			}
 		}
-		System.out.println(map.values());
+		
 		for(Entry<Character, Integer> entry :  map.entrySet()){
 	        if(entry.getValue() != 0) return false;
 	    }

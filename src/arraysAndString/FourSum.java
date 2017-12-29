@@ -16,7 +16,9 @@ Compute all the possible sums of the arrays C and D.
 	 */
 	
 	public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
+		
 		Map<Integer,Integer> sums = new HashMap<>();
+		
 		int count = 0;
 		for(int i=0; i<A.length;i++) {
 			for(int j=0;j<B.length;j++){

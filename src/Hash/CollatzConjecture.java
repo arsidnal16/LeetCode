@@ -12,7 +12,7 @@ public class CollatzConjecture {
 			long testI = i;
 			while (testI >= i) {
 				if (sequence.add(testI)) {
-					return false; // previously encountered testI so it has falledn into a loop.
+					return false; // previously encountered testI so it has fallen into a loop.
 				}
 
 				if (testI % 2 != 0) {

@@ -20,7 +20,11 @@ For example, given n = 3, a solution set is:
 
 public class GenerateParanthesis {
 	
-	public List<String> generateParenthesis(int n) {
+	public static void main(String args[]) {
+		System.out.println(generateParenthesis(2));
+	}
+	
+	public static List<String> generateParenthesis(int n) {
 	    ArrayList<String> result = new ArrayList<String>();
 	    dfs(result, "", n, n);
 	    return result;
@@ -29,7 +33,7 @@ public class GenerateParanthesis {
 	left and right represents the remaining number of ( and ) that need to be added. 
 	When left > right, there are more ")" placed than "(". Such cases are wrong and the method stops. 
 	*/
-	public void dfs(ArrayList<String> result, String s, int left, int right){
+	public static void dfs(ArrayList<String> result, String s, int left, int right){
 	    if(left > right)
 	        return;
 	 

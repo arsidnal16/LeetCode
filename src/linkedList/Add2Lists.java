@@ -35,18 +35,18 @@ Output: 7 -> 8 -> 0 -> 7
         }
         
         int sum = 0;
-        ListNode list = new ListNode(0);
+        ListNode listNode = new ListNode(0);
         while (!s1.empty() || !s2.empty()) {
             if (!s1.empty()) sum += s1.pop();
             if (!s2.empty()) sum += s2.pop();
-            list.val = sum % 10;
+            listNode.val = sum % 10;
             ListNode head = new ListNode(sum / 10);
-            head.next = list;
-            list = head;
+            head.next = listNode;
+            listNode = head;
             sum /= 10;
         }
         
-        return list.val == 0 ? list.next : list;
+        return listNode.val == 0 ? listNode.next : listNode;
     }
 
 }

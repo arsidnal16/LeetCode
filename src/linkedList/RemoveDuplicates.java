@@ -15,9 +15,10 @@ public class RemoveDuplicates {
 
 	/*
 	 * Function to remove duplicates from a unsorted linked list
+	 * 
+	 * We can also use 2 pointers and remove duplicates without extra space but time complexity will be O(n^2)
 	 */
 	static void removeDuplicate(node head) {
-		// Hash to store seen values
 		HashSet<Integer> hs = new HashSet<>();
 
 		/* Pick elements one by one */

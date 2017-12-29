@@ -24,6 +24,10 @@ public class IntersectionOfLinkedList {
 	  }
 
 	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+		
+		// To check whether 2 lists intersect or not, we can compare the tail
+		
+		
 	    int lenA = length(headA), lenB = length(headB);
 	    // move headA and headB to the same start point
 	    while (lenA > lenB) {

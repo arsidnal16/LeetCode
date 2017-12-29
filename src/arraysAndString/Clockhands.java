@@ -1,6 +1,6 @@
 package arraysAndString;
 
-public class Clockhands {
+public class ClockHands {
 	
 	/*
 	 * The minute hand moves 360 degree in 60 minute(or 6 degree in one minute) and
@@ -21,7 +21,7 @@ public class Clockhands {
  
         // Calculate the angles moved by hour and minute hands
         // with reference to 12:00
-        int hour_angle = (int)(0.5 * (h*60 + m));
+        int hour_angle = (int)(0.5 * (h*60 + m));  // we consider whole circle as 360.
         int minute_angle = (int)(6*m);
  
         // Find the difference between two angles

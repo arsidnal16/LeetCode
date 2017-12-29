@@ -13,9 +13,6 @@ public class ConstantTimeHashMap {
 	 */
 
 	ArrayList<Integer> arr; // A resizable array
-
-	// A hash where keys are array elements and vlaues are
-	// indexes in arr[]
 	HashMap<Integer, Integer> hash;
 
 	// Constructor (creates arr[] and hash)
@@ -24,23 +21,17 @@ public class ConstantTimeHashMap {
 		hash = new HashMap<Integer, Integer>();
 	}
 
-	// A Theta(1) function to add an element to MyDS
-	// data structure
+	
 	void add(int x) {
-		// If ekement is already present, then noting to do
 		if (hash.get(x) != null)
 			return;
 
-		// Else put element at the end of arr[]
 		int s = arr.size();
 		arr.add(x);
 
-		// And put in hash also
 		hash.put(x, s);
 	}
 
-	// A Theta(1) function to remove an element from MyDS
-	// data structure
 	void remove(int x) {
 		// Check if element is present
 		Integer index = hash.get(x);

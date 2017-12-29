@@ -7,7 +7,7 @@ import java.util.Set;
 public class LengthOfLongestContainedInterval {
 	
 	public int longestContainedRange(List<Integer> A) {
-	Set<Integer> unprocessedEntries =  new HashSet<>(A);
+	Set<Integer> unprocessedEntries =  new HashSet<>(A);  // HashSet made from list given
 	
 	int maxIntervalSize =0;
 	

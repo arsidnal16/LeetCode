@@ -41,7 +41,7 @@ public class LevelOrderTraversal {
 	       
 	    }
 
-	
+	// to print in one line
 	 public static void levelOrderTraversal(TreeNode root){
 			Queue<TreeNode> q = new LinkedList<TreeNode>();
 			q.add(root);
@@ -62,7 +62,7 @@ public class LevelOrderTraversal {
 		}
 	 
 	 
-	 //to print in list
+	 //to print in list of list
 	 
 	 public List<List<Integer>> levelOrder(TreeNode root) {
 	        List<List<Integer>> result = new LinkedList<List<Integer>>();

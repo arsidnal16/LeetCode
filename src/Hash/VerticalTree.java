@@ -3,7 +3,6 @@ package Hash;
 import java.util.ArrayList;
 import java.util.Map.Entry;
 import java.util.TreeMap;
-import java.util.Vector;
 
 public class VerticalTree {
 

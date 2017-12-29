@@ -1,37 +1,53 @@
 package arraysAndString;
 
 public class FindKthLargest {
-	public int findKthLargest(int[] a, int k) {
-	    int n = a.length;
-	    int p = quickSelect(a, 0, n - 1, n - k + 1);
-	    return a[p];
-	  }
-	  
-	  // return the index of the kth smallest number
-	  int quickSelect(int[] a, int lo, int hi, int k) {
-	    // use quick sort's idea
-	    // put nums that are <= pivot to the left
-	    // put nums that are  > pivot to the right
-	    int i = lo, j = hi, pivot = a[hi];
-	    while (i < j) {
-	      if (a[i++] > pivot) swap(a, --i, --j);
-	    }
-	    swap(a, i, hi);
-	    
-	    // count the nums that are <= pivot from lo
-	    int m = i - lo + 1;
-	    
-	    // pivot is the one!
-	    if (m == k)     return i;
-	    // pivot is too big, so it must be on the left
-	    else if (m > k) return quickSelect(a, lo, i - 1, k);
-	    // pivot is too small, so it must be on the right
-	    else            return quickSelect(a, i + 1, hi, k - m);
-	  }
-	  
-	  void swap(int[] a, int i, int j) {
-	    int tmp = a[i];
-	    a[i] = a[j];
-	    a[j] = tmp;
-	  }
+
+	public int findKthLargest(int[] nums, int k) {
+		if (k < 1 || nums == null) {
+			return 0;
+		}
+
+		return getKth(nums.length - k + 1, nums, 0, nums.length - 1);
+	}
+
+	public int getKth(int k, int[] nums, int start, int end) {
+
+		int pivot = nums[end];
+
+		int left = start;
+		int right = end;
+
+		while (true) {
+
+			while (nums[left] < pivot && left < right) {
+				left++;
+			}
+
+			while (nums[right] >= pivot && right > left) {
+				right--;
+			}
+
+			if (left == right) {
+				break;
+			}
+
+			swap(nums, left, right);
+		}
+
+		swap(nums, left, end);
+
+		if (k == left + 1) {
+			return pivot;
+		} else if (k < left + 1) {
+			return getKth(k, nums, start, left - 1);
+		} else {
+			return getKth(k, nums, left + 1, end);
+		}
+	}
+
+	public void swap(int[] nums, int n1, int n2) {
+		int tmp = nums[n1];
+		nums[n1] = nums[n2];
+		nums[n2] = tmp;
+	}
 }

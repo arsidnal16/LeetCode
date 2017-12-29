@@ -36,7 +36,7 @@ public class MergeIntervals {
         List<Interval> result = new ArrayList<>();
         Interval prev = null;
         for (Interval inter : intervals) {
-            if (  prev==null || inter.start>prev.end ) {
+            if ( prev==null || inter.start>prev.end ) {
                 result.add(inter);
                 prev = inter;
             } else if (inter.end>prev.end) {
