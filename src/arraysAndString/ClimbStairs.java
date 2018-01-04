@@ -31,4 +31,20 @@ public class ClimbStairs {
         }
         return second;
     }
+	
+	
+	static int[] arr;
+	public static int countWays(int n, int[] arr){
+	   arr = new int[n+1];
+	   if(n<0) return 0;
+	   else if (n==0) return 1;
+	   else if (arr[n]>-1) return arr[n];
+	   else{
+	      arr[n]=countWays(n-1, arr)+
+	             countWays(n-2, arr)+
+	             countWays(n-3, arr);
+	      return arr[n];
+	   }
+	}
+
 }
