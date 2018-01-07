@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class PermutationsOfIntegerArray {
+public class PermutationsOfIntegerArrayList {
 	
 	public static void main(String args[]) {
 		List<Integer> list = new ArrayList<>();

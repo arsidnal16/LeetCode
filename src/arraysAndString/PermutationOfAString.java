@@ -21,6 +21,9 @@ public class PermutationOfAString {
      */
 	 private static void permuteUtil(String str, int l, int r)
 	    {
+		 
+		// System.out.println("l is "+l);
+		// System.out.println("r is "+r);
 	        if (l == r)
 	            System.out.println(str);
 	        else
