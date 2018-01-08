@@ -32,9 +32,7 @@ class MinimumCostPath
         /* Construct rest of the tc array */
         for (i = 1; i <= m; i++)
             for (j = 1; j <= n; j++)
-                tc[i][j] = min(tc[i-1][j-1], 
-                               tc[i-1][j],
-                               tc[i][j-1]) + cost[i][j];
+                tc[i][j] = min(tc[i-1][j-1], tc[i-1][j], tc[i][j-1]) + cost[i][j];
  
         return tc[m][n];
     }

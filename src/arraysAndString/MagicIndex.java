@@ -4,7 +4,7 @@ public class MagicIndex {
 	
 	// 8.3 CTCI pg 346
 	
-	
+	// magic index is A[i] = i;
 	
 	//if elements are distinct, if elements are not distinct this algo fails
 	

@@ -25,12 +25,12 @@ Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
 	        int left = A[l];
 	        int right = A[r];
 	        if (left <= right) {
-	            // add volum until an edge larger than the left edge
+	            // add volume until an edge larger than the left edge
 	            while (l < r && left >= A[++l]) {
 	                ans += left - A[l];
 	            }
 	        } else {
-	            // add volum until an edge larger than the right volum
+	            // add volume until an edge larger than the right volume
 	            while (l < r && A[--r] <= right) {
 	                ans += right - A[r];
 	            }
