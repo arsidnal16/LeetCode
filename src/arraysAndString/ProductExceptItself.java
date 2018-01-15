@@ -30,7 +30,7 @@ output = [
 	        tmp *= nums[i];
 	    }
 	    
-	    tmp =1;
+	    tmp = 1;
 	    for (int i = nums.length - 1; i >= 0; i--) {
 	        result[i] *= tmp;
 	        tmp *= nums[i];
