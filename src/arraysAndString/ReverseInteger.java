@@ -9,13 +9,10 @@ public class ReverseInteger {
 	    while (x != 0)
 	    {
 	        int tail = x % 10;
-	        
-	        System.out.println("tail is "+tail);
 	        result = result * 10 + tail;
-	        
-	        System.out.println("new Result is "+result);
-	       
 	        x = x / 10;
+	        
+	        System.out.println("x is "+ x);
 	    }
 	    
 	    System.out.println(result);

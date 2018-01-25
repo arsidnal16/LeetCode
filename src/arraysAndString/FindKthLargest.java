@@ -3,51 +3,45 @@ package arraysAndString;
 public class FindKthLargest {
 
 	public int findKthLargest(int[] nums, int k) {
-		if (k < 1 || nums == null) {
-			return 0;
-		}
+		k = nums.length - k;
+        int lo = 0;
+        int hi = nums.length - 1;
+        while (lo < hi) {
+            final int j = partition(nums, lo, hi);
+            if(j < k) {
+                lo = j + 1;
+            } else if (j > k) {
+                hi = j - 1;
+            } else {
+                break;
+            }
+        }
+        return nums[k];
+    }
 
-		return getKth(nums.length - k + 1, nums, 0, nums.length - 1);
-	}
+    private int partition(int[] a, int lo, int hi) {
 
-	public int getKth(int k, int[] nums, int start, int end) {
+        int i = lo;
+        int j = hi + 1;
+        while(true) {
+            while(i < hi && less(a[++i], a[lo]));
+            while(j > lo && less(a[lo], a[--j]));
+            if(i >= j) {
+                break;
+            }
+            exch(a, i, j);
+        }
+        exch(a, lo, j);
+        return j;
+    }
 
-		int pivot = nums[end];
+    private void exch(int[] a, int i, int j) {
+        final int tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+    }
 
-		int left = start;
-		int right = end;
-
-		while (true) {
-
-			while (nums[left] < pivot && left < right) {
-				left++;
-			}
-
-			while (nums[right] >= pivot && right > left) {
-				right--;
-			}
-
-			if (left == right) {
-				break;
-			}
-
-			swap(nums, left, right);
-		}
-
-		swap(nums, left, end);
-
-		if (k == left + 1) {
-			return pivot;
-		} else if (k < left + 1) {
-			return getKth(k, nums, start, left - 1);
-		} else {
-			return getKth(k, nums, left + 1, end);
-		}
-	}
-
-	public void swap(int[] nums, int n1, int n2) {
-		int tmp = nums[n1];
-		nums[n1] = nums[n2];
-		nums[n2] = tmp;
+    private boolean less(int v, int w) {
+        return v < w;
 	}
 }

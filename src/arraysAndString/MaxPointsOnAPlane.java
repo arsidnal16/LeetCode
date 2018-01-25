@@ -42,9 +42,9 @@ public class MaxPointsOnAPlane {
     					map.get(x).put(y, 1);
     				}   					
     			}else{
-    				Map<Integer,Integer> m = new HashMap<Integer,Integer>();
-    				m.put(y, 1);
-    				map.put(x, m);
+    				Map<Integer,Integer> newMap = new HashMap<Integer,Integer>();
+    				newMap.put(y, 1);
+    				map.put(x, newMap);
     			}
     			max=Math.max(max, map.get(x).get(y));
     		}
