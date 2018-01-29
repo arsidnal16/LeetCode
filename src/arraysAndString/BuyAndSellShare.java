@@ -1,7 +1,5 @@
 package arraysAndString;
 
-
-
 /*
  * 
  * Say you have an array for which the ith element is the price of a given stock on day i.
@@ -23,33 +21,30 @@ In this case, no transaction is done, i.e. max profit = 0.
  * 
  */
 
-
 public class BuyAndSellShare {
-	
-	 public int maxProfit(int[] prices) {
-	        if (prices.length == 0) {
-				 return 0 ;
-	        		}		
-			 int max = prices[1] - prices[0] ;
-			 int sofarMin = prices[0] ;
-		     for (int i = 1 ; i < prices.length ; ++i) {
-		    	 if (prices[i] > sofarMin) {
-		    		 max = Math.max(max, prices[i] - sofarMin) ;
-		    	 	} else{
-		    		sofarMin = prices[i];  
-		    	 	}
-		     }	     
-		    return  max ;
-	    }
-	 
-	 
-	 
-	 public int maxProfit2(int[] prices) {
-	        int maxprofit = 0;
-	        for (int i = 1; i < prices.length; i++) {
-	            if (prices[i] > prices[i - 1])
-	                maxprofit += prices[i] - prices[i - 1];
-	        }
-	        return maxprofit;
-	    }
+
+	public int maxProfit(int[] prices) {
+		if (prices.length == 0) {
+			return 0;
+		}
+		int max = prices[1] - prices[0];
+		int sofarMin = prices[0];
+		for (int i = 1; i < prices.length; ++i) {
+			if (prices[i] > sofarMin) {
+				max = Math.max(max, prices[i] - sofarMin);
+			} else {
+				sofarMin = prices[i];
+			}
+		}
+		return max;
+	}
+
+	public int maxProfit2(int[] prices) {
+		int maxprofit = 0;
+		for (int i = 1; i < prices.length; i++) {
+			if (prices[i] > prices[i - 1])
+				maxprofit += prices[i] - prices[i - 1];
+		}
+		return maxprofit;
+	}
 }

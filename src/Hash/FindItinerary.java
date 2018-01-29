@@ -17,10 +17,8 @@ public class FindItinerary
         printResult(dataSet);
     }
  
-    // This function populates 'result' for given input 'dataset'
     private static void printResult(Map<String, String> dataSet)
     {
-        // To store reverse of given map
         Map<String, String> reverseMap = new HashMap<String, String>();
  
         // To fill reverse map, iterate through the given map

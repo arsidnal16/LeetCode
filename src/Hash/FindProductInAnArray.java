@@ -42,8 +42,7 @@ public class FindProductInAnArray {
 
 		// Traverse remaining elements
 		for (int i = 0; i < n; i++) {
-			// 0 case must be handles explicitly as
-			// x % 0 is undefined
+			// 0 case must be handles explicitly as x % 0 is undefined
 			if (arr[i] == 0) {
 				if (x == 0)
 					return true;
@@ -51,13 +50,10 @@ public class FindProductInAnArray {
 					continue;
 			}
 
-			// x/arr[i] exists in hash, then we
-			// found a pair
+			// x/arr[i] exists in hash, then we found a pair
 			if (x % arr[i] == 0) {
-				if (hset.contains(x / arr[i]))
-					return true;
+				if (hset.contains(x / arr[i])) return true;
 
-				// Insert arr[i]
 				hset.add(arr[i]);
 			}
 		}

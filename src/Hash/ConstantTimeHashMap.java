@@ -12,12 +12,11 @@ public class ConstantTimeHashMap {
 	 * Θ(1) time. a) Insert b) Delete c) Search d) getRandom
 	 */
 
-	ArrayList<Integer> arr; // A resizable array
+	ArrayList<Integer> list; 
 	HashMap<Integer, Integer> hash;
 
-	// Constructor (creates arr[] and hash)
 	public ConstantTimeHashMap() {
-		arr = new ArrayList<Integer>();
+		list = new ArrayList<Integer>();
 		hash = new HashMap<Integer, Integer>();
 	}
 
@@ -26,8 +25,8 @@ public class ConstantTimeHashMap {
 		if (hash.get(x) != null)
 			return;
 
-		int s = arr.size();
-		arr.add(x);
+		int s = list.size();
+		list.add(x);
 
 		hash.put(x, s);
 	}
@@ -42,13 +41,13 @@ public class ConstantTimeHashMap {
 		hash.remove(x);
 
 		// Swap element with last element so that remove from
-		// arr[] can be done in O(1) time
-		int size = arr.size();
-		Integer last = arr.get(size - 1);
-		Collections.swap(arr, index, size - 1);
+		// arraylist can be done in O(1) time
+		int size = list.size();
+		Integer last = list.get(size - 1);
+		Collections.swap(list, index, size - 1);
 
 		// Remove last element (This is O(1))
-		arr.remove(size - 1);
+		list.remove(size - 1);
 
 		// Update hash table for new index of last element
 		hash.put(last, index);
@@ -58,9 +57,9 @@ public class ConstantTimeHashMap {
 	int getRandom() {
 		// Find a random index from 0 to size - 1
 		Random rand = new Random(); // Choose a different seed
-		int index = rand.nextInt(arr.size());
+		int index = rand.nextInt(list.size());
 
 		// Return element at randomly picked index
-		return arr.get(index);
+		return list.get(index);
 	}
 }
